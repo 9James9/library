@@ -15,7 +15,9 @@ function addBookToLibrary() {
     let title = document.getElementById('titleinput').value
     let author = document.getElementById('authorinput').value
     let pages = document.getElementById('pagesinput').value
-    let read = document.querySelectorAll('.radiobtn').value
+    
+    let read = document.getElementById('radioform')
+    read = (read.elements["read"].value)
     myLibrary.push(new Book(title,author,pages,read))
     
 }

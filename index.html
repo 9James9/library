@@ -19,10 +19,11 @@
         <input id = "pagesinput" class = "bookinput">
         <p>Read?</p>
         <div id="read">
-            <p>Yes</p>
-            <input class = "bookinput,radiobtn" type = "radio" value = "false">
-            <p>No</p>
-            <input class = "bookinput,radiobtn" type = "radio" value = "true">
+            <form id = "radioform">
+            <input name = "read" class = "bookinput,radiobtn" type = "radio" value = "false">Yes
+            
+            <input name = "read" class = "bookinput,radiobtn" type = "radio" value = "true">No
+            </form>
         </div>
         
         <button id = "addbook">Add book</button>
