@@ -7,8 +7,3 @@
     width: 25%;
     
 }
-#read {
- display: flex;
- flex-direction: row;
- align-items: center;
-}
