@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "script.js" defer></script>
+    
     <link rel = "stylesheet" type = "text/css" href = "style.css">
     <title>Library</title>
 </head>
 <body>
     <h1>Add a book</h1>
     <div id = "container">
-        <p>Title</p>
-        <input class = "bookinput" type = "text">
+        <p id = "title">Title</p>
+        <input id = "titleinput" class = "bookinput">
         <p>Author</p>
-        <input class = "bookinput" type = "text">
+        <input id = "authorinput" class = "bookinput">
         <p>Pages</p>
-        <input class = "bookinput" type = "text">
+        <input id = "pagesinput" class = "bookinput">
         <p>Read?</p>
         <div id="read">
             <p>Yes</p>
-            <input id = "readtrue" class = "bookinput" type = "radio">
+            <input class = "bookinput,radiobtn" type = "radio" value = "false">
             <p>No</p>
-            <input id = "readfalse" class = "bookinput" type = "radio">
+            <input class = "bookinput,radiobtn" type = "radio" value = "true">
         </div>
         
         <button id = "addbook">Add book</button>
     </div>
 </body>
+<script src="script.js" defer></script>
 </html>
