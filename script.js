@@ -21,8 +21,12 @@ function addBookToLibrary() {
     let read = document.getElementById('radioform')
     read = (read.elements["read"].value)
     myLibrary.push(new Book(title,author,pages,read))
-    console.log(myLibrary[myLibrary.length-1].title)
     addNewest()
+    document.getElementById('titleinput').value = ''
+    document.getElementById('authorinput').value = ''
+    document.getElementById('pagesinput').value = ''
+    document.getElementById('choose_yes').checked = false
+    document.getElementById('choose_no').checked = false
 }
 
 let button = document.getElementById('addbook')
@@ -31,7 +35,9 @@ button.addEventListener('click', () => {
 })
 
 let refresh = document.querySelector('#refresh')
-
+refresh.addEventListener('click', () => {
+    document.getElementById('titleinput').value = ''
+})
 function displayCard(){
     
 
