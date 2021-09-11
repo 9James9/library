@@ -62,6 +62,14 @@ for (const val of myLibrary){
     displayRead.classList.add('displayRead')
     newRead.appendChild(displayRead)
     displayRead.textContent = val.read  
+
+    let deleteContainer = document.querySelector('#delete')
+    let deleteThis = document.createElement('div')
+    deleteContainer.appendChild(deleteThis)
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = "Delete"
+    deleteThis.appendChild(deleteBtn)
+    deleteBtn.classList.add('deleteBtn')
 }
 
 
@@ -86,5 +94,13 @@ function addNewest(){
         displayRead.classList.add('displayRead')
         newRead.appendChild(displayRead)
         displayRead.textContent = myLibrary[myLibrary.length-1].read  
+
+        let deleteContainer = document.querySelector('#delete')
+        let deleteThis = document.createElement('div')
+        deleteContainer.appendChild(deleteThis)
+        let deleteBtn = document.createElement('button')
+        deleteBtn.textContent = "Delete"
+        deleteThis.appendChild(deleteBtn)
+        deleteBtn.classList.add('deleteBtn')
     
     }
