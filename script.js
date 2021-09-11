@@ -70,6 +70,18 @@ for (const val of myLibrary){
     deleteBtn.textContent = "Delete"
     deleteThis.appendChild(deleteBtn)
     deleteBtn.classList.add('deleteBtn')
+    deleteBtn.addEventListener('click', () => {
+        console.log(val.title)
+        newTitle.removeChild(displayTitle)
+        val.title = ''
+        newAuthor.removeChild(displayAuthor)
+        val.author = ''
+        newPages.removeChild(displayPages)
+        val.pages = ''
+        newRead.removeChild(displayRead)
+        val.read = ''
+        deleteThis.removeChild(deleteBtn)
+    })
 }
 
 
@@ -102,5 +114,15 @@ function addNewest(){
         deleteBtn.textContent = "Delete"
         deleteThis.appendChild(deleteBtn)
         deleteBtn.classList.add('deleteBtn')
-    
+        deleteBtn.addEventListener('click', () => {
+            newTitle.removeChild(displayTitle)
+            myLibrary[myLibrary.length-1].title = ''
+            newAuthor.removeChild(displayAuthor)
+            myLibrary[myLibrary.length-1].author = ''
+            newPages.removeChild(displayPages)
+            myLibrary[myLibrary.length-1].pages = ''
+            newRead.removeChild(displayRead)
+            myLibrary[myLibrary.length-1].read = ''
+            deleteThis.removeChild(deleteBtn)
+        })
     }
