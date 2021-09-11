@@ -20,6 +20,11 @@ function addBookToLibrary() {
     let pages = document.getElementById('pagesinput').value  
     let read = document.getElementById('radioform')
     read = (read.elements["read"].value)
+    //if one of the fields is empty, don't allow form to submit
+    if (title == "" || author == "" || pages == "" || document.getElementById('choose_yes').checked == false && document.getElementById('choose_no').checked == false) {
+        alert('Please fill out all fields')
+        return false
+    }
     myLibrary.push(new Book(title,author,pages,read))
     addNewest()
     document.getElementById('titleinput').value = ''
@@ -27,6 +32,7 @@ function addBookToLibrary() {
     document.getElementById('pagesinput').value = ''
     document.getElementById('choose_yes').checked = false
     document.getElementById('choose_no').checked = false
+    
 }
 
 let button = document.getElementById('addbook')
@@ -34,17 +40,7 @@ button.addEventListener('click', () => {
     addBookToLibrary()
 })
 
-let refresh = document.querySelector('#refresh')
-refresh.addEventListener('click', () => {
-    document.getElementById('titleinput').value = ''
-})
-function displayCard(){
-    
 
-newTitle.appendChild(document.createElement('div'))
-
-
-}
 
 for (const val of myLibrary){
     let displayTitle = document.createElement('div')
