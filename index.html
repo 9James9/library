@@ -10,15 +10,15 @@
 <body>
     <h1 id = "mainTitle">Add a book</h1>
     <div id = "container">
-        <p id = "title">Title</p>
-        <input id = "titleinput" class = "bookinput">
-        <p>Author</p>
-        <input id = "authorinput" class = "bookinput">
-        <p>Pages</p>
-        <input id = "pagesinput" class = "bookinput" type = "number">
-        <p>Read?</p>
+        <label for = "title">Title</label>
+        <input name = "title" id = "titleinput" class = "bookinput" required>
+        <label for = "author">Author</label>
+        <input name = "author" id = "authorinput" class = "bookinput" required>
+        <label for = "pages">Pages</label>
+        <input name = "pages" id = "pagesinput" class = "bookinput" type = "number">
+        <label for="read">Read?</label>
         <div id="read">
-            <form id = "radioform">
+            <form name = "read" id = "radioform">
             <input id = "choose_yes" name = "read" class = "bookinput,radiobtn" type = "radio" value = "true">Yes
             
             <input id = "choose_no" name = "read" class = "bookinput,radiobtn" type = "radio" value = "false">No
