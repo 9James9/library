@@ -10,21 +10,29 @@
 <body>
     <h1 id = "mainTitle">Add a book</h1>
     <div id = "container">
-        <label for = "title">Title</label>
-        <input name = "title" id = "titleinput" class = "bookinput" required>
-        <label for = "author">Author</label>
-        <input name = "author" id = "authorinput" class = "bookinput" required>
-        <label for = "pages">Pages</label>
-        <input name = "pages" id = "pagesinput" class = "bookinput" type = "number" required>
-        <label for="read">Read?</label>
-        <div id="read">
-            <form name = "read" id = "radioform">
-            <input id = "choose_yes" name = "read" class = "bookinput,radiobtn" type = "radio" value = "true">Yes
-            
-            <input id = "choose_no" name = "read" class = "bookinput,radiobtn" type = "radio" value = "false">No
-            </form>
-        </div>
-        <button id = "addbook">Save book to library</button>
+        <form>
+            <label for = "title">Title</label><br>
+            <input name = "title" id = "titleinput" class = "bookinput" required><br>
+            <label for = "author">Author</label><br>
+            <input name = "author" id = "authorinput" class = "bookinput" required><br>
+            <label for = "pages">Pages</label><br>
+            <input name = "pages" id = "pagesinput" class = "bookinput" type = "number" required><br>
+            <label for="read">Read?</label>
+            <div id="read">
+
+                <input id = "choose_yes" name = "read" class = "bookinput,radiobtn" type = "radio" value = "true">Yes
+                
+                <input id = "choose_no" name = "read" class = "bookinput,radiobtn" type = "radio" value = "false">No
+
+            </div>
+            <button id = "addbook">Save book to library</button>
+        </form>
+
+
+
+
+
+
     </div>
     <div id = "newbooks">
         <div id = "newTitle">Title:</div>

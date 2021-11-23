@@ -18,14 +18,13 @@ function addBookToLibrary() {
     let title = document.getElementById('titleinput').value
     let author = document.getElementById('authorinput').value
     let pages = document.getElementById('pagesinput').value  
-    let read = document.getElementById('radioform')
-    read = (read.elements["read"].value)
+    let read = document.querySelector('input[name="read"]:checked').value
     
     //if one of the fields is empty, don't allow form to submit
-    if (title == "" || author == "" || pages == "" || document.getElementById('choose_yes').checked == false && document.getElementById('choose_no').checked == false) {
-        alert('Please fill out all fields')
-        return false
-    }
+    // if (title == "" || author == "" || pages == "" || document.getElementById('choose_yes').checked == false && document.getElementById('choose_no').checked == false) {
+    //     alert('Please fill out all fields')
+    //     return false
+    // }
    
     myLibrary.push(new Book(title,author,pages,read))
     addNewest()

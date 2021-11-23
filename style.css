@@ -25,5 +25,5 @@ input:valid {
     border: 3px solid green;
 }
 input:invalid:required {
-    border: 3px red dashed;
+    border: 1px red dashed;
 }
