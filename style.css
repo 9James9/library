@@ -21,3 +21,9 @@
     display: flex;
     justify-content: center;
 }
+input:valid {
+    border: 3px solid green;
+}
+input:invalid:required {
+    border: 3px red dashed;
+}
